@@ -460,6 +460,124 @@
 # if __name__ == "__main__":
 #     main()
 
+# ЗАДАНИЕ10
+# class RetailItem:
+#     def __init__(self, description, quantity, price):
+#         self.description = description
+#         self.quantity = quantity
+#         self.price = price
+#
+# class CashRegister:
+#     def __init__(self):
+#         self.items = []
+#
+#     def purchase_item(self, item):
+#         self.items.append(item)
+#
+#     def get_total(self):
+#         total = 0
+#         for item in self.items:
+#             total += item.price * item.quantity
+#         return total
+#
+#     def show_items(self):
+#         for item in self.items:
+#             print(f"Description: {item.description}")
+#             print(f"Quantity: {item.quantity}")
+#             print(f"Price: {item.price}")
+#
+#     def clear(self):
+#         self.items.clear()
+#
+# register = CashRegister()
+#
+# while True:
+#     choice = input("Хотите купить товар? (да/нет): ")
+#     if choice.lower() != "да":
+#         break
+#
+#     description = input("Введите описание товара: ")
+#     quantity = int(input("Введите количество: "))
+#     price = float(input("Введите цену: "))
+#
+#     item = RetailItem(description, quantity, price)
+#     register.purchase_item(item)
+#
+# print("Список товаров:")
+# register.show_items()
+# print("Общая стоимость:", register.get_total())
+#
+# register.clear()
+
+
+
+#ЗАДАНИЕ11
+# class Question:
+#     def __init__(self, question, options, correct_answer):
+#         self.question = question
+#         self.options = options
+#         self.correct_answer = correct_answer
+#
+#     def get_question(self):
+#         return self.question
+#
+#     def get_options(self):
+#         return self.options
+#
+#     def get_correct_answer(self):
+#         return self.correct_answer
+#
+# questions = [
+#     Question("Какая страна является самой большой по территории?",
+#              ["А. Россия", "Б. Канада", "В. Китай", "Г. США"], 1),
+#     Question("Какой город является столицей Франции?",
+#              ["А. Париж", "Б. Рим", "В. Мадрид", "Г. Берлин"], 1),
+#     Question("Какой город является столицей Италии?",
+#              ["А. Рим", "Б. Париж", "В. Москва", "Г. Лондон"], 1),
+#     Question("Как называется самая длинная река в мире?",
+#              ["А. Амазонка", "Б. Нил", "В. Янцзы", "Г. Миссисипи"], 2),
+#     Question("Какова величина числа π (пи)?",
+#              ["А. 3.1415", "Б. 2.7182", "В. 1.6180", "Г. 1.7321"], 1),
+#     Question("Какое из этих животных является хищником?",
+#              ["А. Лось", "Б. Заяц", "В. Ястреб", "Г. Лебедь"], 3),
+#     Question("Сколько планет в солнечной системе?",
+#              ["А. 7", "Б. 8", "В. 9", "Г. 10"], 2),
+#     Question("Какой газ является основным компонентом воздуха?",
+#              ["А. Кислород", "Б. Углекислый газ", "В. Водород", "Г. Азот"], 4),
+#     Question("Кто написал произведение 'Война и мир'?",
+#              ["А. Федор Достоевский", "Б. Александр Солженицын",
+#               "В. Лев Толстой", "Г. Антон Чехов"], 3),
+#     Question("Кто изображен на американской 100-долларовой купюре?",
+#              ["А. Джордж Вашингтон", "Б. Авраам Линкольн",
+#               "В. Бенджамин Франклин", "Г. Томас Джефферсон"], 3)
+# ]
+#
+# score_1 = 0
+# score_2 = 0
+#
+# for i, question in enumerate(questions, 1):
+#     print(f"Вопрос {i}: {question.get_question()}")
+#     options = question.get_options()
+#     for j, option in enumerate(options, 1):
+#         print(f"{j}. {option}")
+#     answer = int(input("Выберите номер правильного ответа: "))
+#     if answer == question.get_correct_answer():
+#         if i % 2 == 1:
+#             score_1 += 1
+#         else:
+#             score_2 += 1
+#
+# print("Результаты викторины:")
+# print(f"Игрок 1: {score_1} очков")
+# print(f"Игрок 2: {score_2} очков")
+#
+# if score_1 > score_2:
+#     print("Игрок 1 победил!")
+# elif score_2 > score_1:
+#     print("Игрок 2 победил!")
+# else:
+#     print("Ничья!")
+
 
 
 
