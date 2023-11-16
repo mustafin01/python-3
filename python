@@ -1,0 +1,149 @@
+# class Student:
+#     def __init__(self, name, lastname, age):
+#         self.name = name
+#         self.lastname = lastname
+#         self.age = age
+#
+#     def __repr__(self):
+#         return f"{self.name} {self.lastname} ({self.age})"
+#
+#
+# class Students:
+#     lst = []
+#
+#     @staticmethod
+#     def add(student):
+#         Students.lst.append(student)
+#
+#     @staticmethod
+#     def sort():
+#         Students.lst.sort(key=lambda s: (s.name, s.lastname))
+#
+#
+# st_1 = Student("Ivan", "Borski", 22)
+# st_2 = Student("Ann", "Allies", 18)
+# st_3 = Student("Ann", "Abbie", 19)
+# print(Students.lst)
+# Students.add(st_1)
+# Students.add(st_2)
+# Students.add(st_3)
+# print(Students.lst)
+# Students.sort()
+# print(Students.lst)
+
+ #ЗАДАНИЕ 2
+# class Rectangle:
+#     def __init__(self, coord: (int, int), width: int, height: int):
+#         self.a, self.width, self.height = coord, width, height
+#
+#     @property
+#     def b(self) -> (int, int):
+#         return self.a[0] + self.width, self.a[1]
+#
+#     @property
+#     def c(self) -> (int, int):
+#         return self.b[0], self.b[1] - self.height
+#
+#     @property
+#     def d(self) -> (int, int):
+#         return self.a[0], self.a[1] - self.height
+#
+#     @property
+#     def perimeter(self) -> int:
+#         return (self.width + self.height) * 2
+#
+#     @property
+#     def area(self) -> int:
+#         return self.width * self.height
+#
+#     def __str__(self) -> str:
+#         return (f"Rectangle(width={self.width}, height={self.height}, "
+#                 f"perimeter={self.perimeter}, area={self.area})\n"
+#                 f"    Rectangle.a: x={self.a[0]}, y={self.a[1]}\n"
+#                 f"    Rectangle.b: x={self.b[0]}, y={self.b[1]}\n"
+#                 f"    Rectangle.c: x={self.c[0]}, y={self.c[1]}\n"
+#                 f"    Rectangle.d: x={self.d[0]}, y={self.d[1]}\n")
+#
+#
+# rect = Rectangle((0, 5), 5, 10)
+# print(rect)
+# rect.a = (5, 5)
+# print(rect)
+# rect.height = 5
+# print(rect)
+
+#ЗАДАНИЕ 3
+
+# class auto():
+#     def add(self, model, year, engine, color, price):
+#         self.model = model
+#         self.year = year
+#         self.engine = engine
+#         self.color = color
+#         self.price = price
+#     def print_(self):
+#         print(f'Модель {self.model} {self.year} года выпуска с объемом двигателя {self.engine} литра цвета {self.color} и стоимости {self.price} рублей')
+#     def change_model(self, new_model):
+#         self.model = new_model
+#     def change_year(self, new_year):
+#         self.year = new_year
+#     def change_engine(self, new_engine):
+#         self.engine = new_engine
+#     def change_color(self, new_color):
+#         self.color = new_color
+#     def change_price(self, new_price):
+#         self.price = new_price
+
+#ЗАДАНИЕ 4
+
+# class BankAccount():
+#     def __init__(self):
+#         self.__balance = 0
+#
+#     def deposit(self, summa):
+#         self.__balance += summa
+#         return self.__balance
+#
+#     def withdraw(self, summa):
+#         if self.__balance < summa: raise
+#         self.__balance -= summa
+#         return self.__balance
+#
+#
+# my_bank_account = BankAccount()
+# print(my_bank_account.deposit(1000))
+# try:
+#     print(my_bank_account.withdraw(100))
+# except:
+#     print('Недостаточно средств на счету')
+
+
+#ЗАДАНИЕ 5
+
+# class Triangle(object):
+#
+#     def __init__(self, a, b, c):
+#         self.a = a
+#         self.b = b
+#         self.c = c
+#
+#     def perimeter(self):
+#         return self.a + self.b + self.c
+#
+#
+# class EquilateralTriangle(object):
+#
+#     def __init__(Triangle, a):
+#         Triangle.a = a
+#         Triangle.b = a
+#         Triangle.c = a
+#
+#     def perimeter(self):
+#         return Triangle.perimeter(self)
+#
+#
+# if __name__ == "__main__":
+#     Triangle1 = Triangle(3, 7, 6)
+#     print(Triangle1.perimeter())
+#     Triangle2 = EquilateralTriangle(9)
+#     print(Triangle2.perimeter())
